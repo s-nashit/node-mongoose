@@ -1,0 +1,24 @@
+{
+  "name": "newe",
+  "version": "2.1.3",
+  "description": "router, cookies & session",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "start:dev": "nodemon ./src/index.js",
+    "start:prod": "node --watch ./src/index.js"
+  },
+  "keywords": [
+    "router",
+    "cookies",
+    "session"
+  ],
+  "author": "nashit",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}

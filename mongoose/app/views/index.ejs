@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= page %></title>
+    <style>
+        body{
+            text-align:center
+        }
+        table{
+            width: 100%;
+            border:2px solid black
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:blue">Students Data</h1>
+    <h3> <%= title %></h3>
+
+    <h4><a href="/register">Register here</a></h4>
+    <% if (students!= "") { %>
+    <table border=1px>
+        <tr>
+            <th>Roll No.</th>
+            <th>Name</th>
+            <th>E-Mail</th>
+            <th>Age</th>
+            <th>Operation</th>
+        </tr>
+        <% students.forEach((students, index) =>{ %>
+            <tr>
+                <td><%= index+1 %></td>
+                <td> <%= students.name %></td>
+                <td><%= students.mail %></td>
+                <td><%= students.age %></td>
+                <td> <button><a href= '/edit/<%= students.id %>'>Update</a></button> | <a href ="/delete/<%= students.id %>">Delete</a></td>
+            </tr><% }) %>
+
+    </table>
+    <% } %>
+</body>
+</html>
